@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>First</title>
+</head>
+<body>
+<h1>欢迎来到首页面！</h1><br>
+
+<a th:href="@{/success}">跳转到success.xml页面---》/success</a><br>
+<a th:href="@{/hello}">跳转到success.xml页面---》/hello</a><br>
+
+<form th:action="@{/hello(username='admin',password=123456)}" method="post">
+    <input type="submit">
+</form><br>
+
+
+<a th:href="@{/user(username='admin',password=123456)}">使用params属性</a>
+</body>
+</html>
